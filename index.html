@@ -6,33 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.min.css">
-    <title>Artur Tebień</title>
+    <title>Gabinet pomocy psychologicznej, interwencji kryzysowej oraz pisania pism procesowych w Wieliczce</title>
 </head>
 
 <body>
+    <i class="fa fa-arrow-circle-up" aria-hidden="true" id='arrow_up'></i>
     <header class="header">
         <img src="./logo.png" alt="Artur Tebień psycholog" class="header__logo">
         <nav class="nav">
             <ul class="nav__ul">
-                <li class="nav__li"><a href="#">O mnie</a></li>
-                <li class="nav__li"><a href="#">Gabinet</a></li>
-                <li class="nav__li"><a href="#">Usługi</a></li>
-                <li class="nav__li"><a href="#">Kontakt</a></li>
+                <li class="nav__li"><a href="#" id='me'>O mnie</a></li>
+                <li class="nav__li"><a href="#" id='room'>Gabinet</a></li>
+                <li class="nav__li"><a href="#" id='services'>Usługi</a></li>
+                <li class="nav__li"><a href="#" id='contact'>Kontakt</a></li>
             </ul>
         </nav>
     </header>
     <main class="main">
         <div class="main__name">
-            <h1 class="main__h1">Gabinet pomocy psychologicznej w Wieliczce<br>ul. Krakowska 15a</h1>
-            <h2 class="main__h2">Artur Tebień</h2>
+            <h1 class="main__h1">Gabinet pomocy psychologicznej, interwencji kryzysowej oraz pisania pism procesowych w
+                Wieliczce<br>ul. Krakowska 15a 32-020 Wieliczka</h1>
+            <h2 class="main__h2">Serdecznie zapraszam do kontaktu, mgr Artur Tebień </h2>
         </div>
     </main>
-    <section class="me"></section>
+    <section class="me">
+        <div class="me__info">
+            Przez 20 lat bylem policjantem pionu prewencji w KP w Krakowie teraz jestem emerytem policyjnym
+            Jestem mgr Pedagogiki Resocjalizacyjnej i Pomocy Społecznej(Uniwersytet im.J Kochanowskiego w Kielcach ).
+            ukończyłem Ekonomie Społeczną, na Uniwersytecie Ekonomicznym w Krakowie .
+            Przez 15 lat byłem Społecznym Kuratorem Sądowym w Sądzie w Wieliczce ,wraz z przejściem na emeryturę
+            podziękowałem również i za tą funkcje .
+            Teraz jestem zawodowym Mediatorem Sądowym wpisanym na Listę Sadu Okręgowego w Krakowie
+            Realizatorem Gminnego Programu Profilaktycznego w Gminie Wieliczka oraz Przewodniczącym Gminnej Komisji
+            Rozwiązywania Problemów Alkoholowych .Koordynatorem Pracy Młodzieżowego Koła Wolontariatu przy Urzędzie
+            Miasta I Gminy Wieliczka .Oraz przewodnikiem po Kopalni Soli w Wieliczce oraz przewodnikiem po mieście i
+            gminnie w Wieliczce
+            Założyłem Fundacje Rozwoju Osobistego PROGRES gdzie pełnie funkcje Prezesa
+            Jestem empatycznym otwartym na zmiany człowiekiem. Z zamiłowania psycholog ,z wykształcenia pedagog .Bo
+            "człowieka...
+        </div>
+    </section>
+    <section class="room"></section>
+    <section class="services"></section>
+
     <section class="contact">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1282.493498902829!2d20.04349927352029!3d49.99285322571846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2spl!4v1586197280099!5m2!1spl!2spl"
             width="500" height="350" class="contact__map"></iframe>
+        <div class="contact__info">
+            <h2>Dane kontaktowe:</h2>
+            <span>Gabinet pomocy psychologicznej, interwencji kryzysowej oraz pisania pism procesowych w
+                Wieliczce<br>Artur Tebień<br>ul. Krakowska 15a 32-020 Wieliczka<br></span>
+            <span>tel. 696-613-855</span><br>
+            <span class="contact__icons">
+                <i class="fa fa-facebook-square" aria-hidden="true" class="contact__icon"></i>
+                <i class="fa fa-linkedin-square" aria-hidden="true" class="contact__icon"></i>
+                <i class="fa fa-envelope-o" aria-hidden="true" class="contact__icon"></i>
+                <i class="fa fa-user" aria-hidden="true" class="contact__icon"></i>
+            </span>
+        </div>
     </section>
     <footer class="footer">
         <p class="footer__p">
@@ -40,7 +75,9 @@
         </p>
     </footer>
 
-
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
