@@ -44,6 +44,7 @@ $special-color:#528CB6;
 
     &__logo {
         width: 120px;
+
     }
 
 }
@@ -111,10 +112,10 @@ a {
 
         @media (max-width: 766px) {
             padding-top: 30vh;
-            font-size: 8px;
+            font-size: 10px;
             width: 100%;
             text-align: center;
-
+            padding-left: 0;
         }
     }
 
@@ -139,9 +140,13 @@ a {
 
 .active {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 5%;
     left: 35%;
+}
+
+.ham_active {
+    transform: rotate(90deg);
 }
 
 #hamburger {
@@ -149,11 +154,12 @@ a {
 
     @media (max-width: 766px) {
         display: block;
-        position: absolute;
+        position: fixed;
         top: 3%;
         right: 5%;
         color: $main-color;
         font-size: 32px;
+
     }
 }
 
@@ -202,12 +208,21 @@ a {
     &__map {
         margin-top: 15%;
 
+        @media (max-width: 766px) {
+            display: none;
+        }
+
     }
 
     &__info {
         display: block;
         margin-top: 20%;
         text-align: center;
+
+        @media (max-width: 766px) {
+            margin: auto 0;
+            width: 70%;
+        }
     }
 
     &__icons {

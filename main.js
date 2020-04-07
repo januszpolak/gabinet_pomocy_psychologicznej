@@ -29,6 +29,6 @@ const hamburger = document.getElementById('hamburger');
 const menu = document.querySelector('.mobile-nav');
 
 hamburger.addEventListener('click', () => {
-    menu.classList.toggle('active');
-
-})
+    menu.classList.toggle('active')
+    hamburger.classList.toggle('ham_active')
+});
