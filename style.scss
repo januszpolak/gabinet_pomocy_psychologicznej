@@ -31,6 +31,9 @@ $special-color:#528CB6;
     background-color: #fff;
     box-shadow: 0px 6px 14px -1px rgba(127, 187, 191, 1);
 
+    @media (max-width: 766px) {
+        display: none;
+    }
 
     &__logo {
         width: 120px;
@@ -41,7 +44,6 @@ $special-color:#528CB6;
 .nav {
     display: flex;
     width: 100%;
-
 
     &__ul {
         display: flex;
@@ -92,12 +94,25 @@ a {
         padding-top: 35vh;
         padding-left: 3%;
         width: 50%;
+
+        @media (max-width: 766px) {
+            padding-top: 0;
+        }
     }
 
     &__h2 {
         font-size: 18px;
         margin-top: 10%;
     }
+}
+
+.mobile-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+
+
 }
 
 .me {
