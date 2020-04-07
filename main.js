@@ -23,3 +23,12 @@ $('#arrow_up').on('click', function () {
         scrollTop: $('.main').offset().top
     }, 1000)
 })
+
+
+const hamburger = document.getElementById('hamburger');
+const menu = document.querySelector('.mobile-nav');
+
+hamburger.addEventListener('click', () => {
+    menu.classList.toggle('active');
+
+})

@@ -7,7 +7,9 @@ $special-color:#528CB6;
     padding: 0;
     box-sizing: border-box;
 
+
 }
+
 
 #arrow_up {
     position: fixed;
@@ -16,6 +18,10 @@ $special-color:#528CB6;
     bottom: 8%;
     right: 4%;
     transition: .2s ease-in;
+
+    @media (max-width: 766px) {
+        display: none;
+    }
 
     &:hover {
         color: $main-color;
@@ -30,6 +36,7 @@ $special-color:#528CB6;
     padding-left: 3%;
     background-color: #fff;
     box-shadow: 0px 6px 14px -1px rgba(127, 187, 191, 1);
+    overflow: hidden;
 
     @media (max-width: 766px) {
         display: none;
@@ -44,6 +51,7 @@ $special-color:#528CB6;
 .nav {
     display: flex;
     width: 100%;
+    overflow: hidden;
 
     &__ul {
         display: flex;
@@ -87,6 +95,12 @@ a {
     height: 100vh;
     overflow: hidden;
 
+    @media (max-width: 766px) {
+        background-size: 150%;
+        background-position-y: bottom;
+
+    }
+
     &__name {
         color: $main-color;
         font-size: 18px;
@@ -96,29 +110,58 @@ a {
         width: 50%;
 
         @media (max-width: 766px) {
-            padding-top: 0;
+            padding-top: 30vh;
+            font-size: 8px;
+            width: 100%;
+            text-align: center;
+
         }
     }
 
     &__h2 {
         font-size: 18px;
         margin-top: 10%;
+
+        @media (max-width: 766px) {
+            font-size: 10px;
+
+
+        }
     }
 }
 
 .mobile-nav {
+    display: block;
     position: absolute;
     top: 0;
-    right: 0;
+    left: -100px;
+}
 
+.active {
+    display: block;
+    position: absolute;
+    top: 5%;
+    left: 35%;
+}
 
+#hamburger {
+    display: none;
 
+    @media (max-width: 766px) {
+        display: block;
+        position: absolute;
+        top: 3%;
+        right: 5%;
+        color: $main-color;
+        font-size: 32px;
+    }
 }
 
 .me {
     display: flex;
     width: 100%;
     height: 100vh;
+    overflow: hidden;
 
     &__info {
         color: $main-color;
@@ -136,6 +179,7 @@ a {
     width: 100%;
     height: 100vh;
     background-color: rgb(129, 56, 56);
+    overflow: hidden;
 }
 
 .services {
@@ -143,6 +187,7 @@ a {
     width: 100%;
     height: 100vh;
     background-color: rgb(115, 196, 78);
+    overflow: hidden;
 }
 
 .contact {
@@ -152,7 +197,7 @@ a {
     height: 100vh;
     color: $main-color;
     font-family: $main-font;
-
+    overflow: hidden;
 
     &__map {
         margin-top: 15%;
@@ -189,6 +234,7 @@ a {
     text-align: center;
     border-top: 1px solid $main-color;
     box-shadow: 0px -2px 9px -1px $main-color;
+    overflow: hidden;
 
     &__p {
         margin-top: 2.5vh;
