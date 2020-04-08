@@ -29,12 +29,35 @@ $special-color:#528CB6;
 
     @media (max-width: 766px) {
         display: block;
+        width: 15%;
         position: fixed;
         left: 4%;
         bottom: 8%;
         font-size: 48px;
+        animation: pulse 7s infinite;
     }
 
+    @keyframes pulse {
+        0% {
+            transform: rotateZ(0);
+        }
+
+        25% {
+            transform: rotateZ(45deg);
+        }
+
+        50% {
+            transform: rotateZ(0);
+        }
+
+        75% {
+            transform: rotateZ(-45deg);
+        }
+
+        100% {
+            transform: rotateZ(0);
+        }
+    }
 }
 
 .header {
