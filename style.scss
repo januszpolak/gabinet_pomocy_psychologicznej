@@ -63,6 +63,7 @@ $special-color:#528CB6;
     }
 
     &__li {
+        list-style-type: none;
         display: block;
         width: 20%;
         font-size: 24px;
@@ -136,6 +137,14 @@ a {
     position: absolute;
     top: 0;
     left: -100px;
+    transition: .3s;
+    text-decoration: none;
+
+
+    &__li {
+        list-style-type: none;
+        text-align: center;
+    }
 }
 
 .active {
@@ -159,6 +168,8 @@ a {
         right: 5%;
         color: $main-color;
         font-size: 32px;
+        transition: .3s;
+
 
     }
 }
