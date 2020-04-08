@@ -33,8 +33,8 @@ $special-color:#528CB6;
         position: fixed;
         left: 4%;
         bottom: 8%;
-        font-size: 48px;
-        animation: pulse 7s infinite;
+        animation: pulse 4s infinite;
+
     }
 
     @keyframes pulse {
@@ -47,11 +47,11 @@ $special-color:#528CB6;
         }
 
         50% {
-            transform: rotateZ(0);
+            transform: rotateZ(-45deg);
         }
 
         75% {
-            transform: rotateZ(-45deg);
+            transform: rotateZ(0);
         }
 
         100% {
