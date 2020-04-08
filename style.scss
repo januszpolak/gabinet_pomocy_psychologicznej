@@ -76,7 +76,6 @@ $special-color:#528CB6;
 
     &__logo {
         width: 120px;
-
     }
 
 }
@@ -145,7 +144,7 @@ a {
         width: 50%;
 
         @media (max-width: 766px) {
-            padding-top: 30vh;
+            padding-top: 35vh;
             font-size: 10px;
             width: 100%;
             text-align: center;
@@ -165,13 +164,34 @@ a {
     }
 }
 
+.logo-mobile {
+    display: none;
+
+    @media (max-width: 766px) {
+        display: block;
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        align-items: center;
+
+    }
+}
+
+
 .mobile-nav {
     display: block;
     position: absolute;
-    top: 0;
-    left: -100px;
+    top: -10px;
+    left: -200px;
     transition: .3s;
     text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid $main-color;
+    border-radius: 5px;
+    background-color: #fff;
+    z-index: 1;
 
 
     &__li {
@@ -184,7 +204,7 @@ a {
     display: block;
     position: fixed;
     top: 5%;
-    left: 35%;
+    left: 33%;
 }
 
 .ham_active {
