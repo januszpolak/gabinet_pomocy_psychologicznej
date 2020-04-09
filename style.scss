@@ -18,10 +18,12 @@ $special-color:#528CB6;
     bottom: 8%;
     right: 4%;
     transition: .2s ease-in;
+    animation: pulse 4s infinite;
 
     &:hover {
         color: $main-color;
     }
+
 
     @media (max-width: 766px) {
         display: none;
@@ -236,6 +238,7 @@ a {
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
+    justify-content: space-around;
 
     @media (max-width: 766px) {
         min-height: 100vh;
@@ -247,8 +250,24 @@ a {
         font-size: 18px;
         width: 50%;
         padding-top: 35vh;
-        padding-left: 3%;
         text-align: center;
+
+        @media (max-width: 766px) {
+            width: 90%;
+            margin: 15% auto;
+            padding: 0;
+            font-size: 15px;
+        }
+    }
+
+    &__picture {
+        width: 30%;
+        height: 30%;
+        padding-top: 35vh;
+
+        @media (max-width: 766px) {
+            display: none;
+        }
     }
 }
 
