@@ -189,11 +189,11 @@ a {
 .mobile-nav {
     display: block;
     position: absolute;
-    top: -10px;
-    left: -200px;
+    top: -50px;
+    left: -400px;
     transition: .3s;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px 30px;
     border: 1px solid $main-color;
     border-radius: 5px;
     background-color: #fff;
@@ -204,13 +204,25 @@ a {
         list-style-type: none;
         text-align: center;
     }
+
+    &__li>a {
+        font-size: 48px;
+
+        &:hover {
+            border-bottom: 4px solid $special-color;
+            color: $special-color;
+
+        }
+
+    }
 }
 
 .active {
     display: block;
     position: fixed;
-    top: 5%;
-    left: 33%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .ham_active {
