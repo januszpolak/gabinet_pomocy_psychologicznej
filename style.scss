@@ -75,6 +75,7 @@ $special-color:#528CB6;
     background-color: #fff;
     box-shadow: 0px 6px 14px -1px rgba(127, 187, 191, 1);
     overflow: hidden;
+    z-index: 999;
 
     @media (max-width: 766px) {
         display: none;
@@ -128,14 +129,15 @@ a {
 .main {
     background-image: url('cactus.jpg');
     background-position: right;
-    background-size: 80%;
+    background-position-y: bottom;
+    background-size: 60%;
     background-repeat: no-repeat;
     width: 100%;
     min-height: 100vh;
 
 
     @media (max-width: 766px) {
-        background-size: 150%;
+        background-size: 120%;
         background-position-y: bottom;
         min-height: 100vh;
 
@@ -143,7 +145,7 @@ a {
 
     &__name {
         color: $main-color;
-        font-size: 18px;
+        font-size: 15px;
         font-family: $main-font;
         padding-top: 35vh;
         padding-left: 3%;
@@ -223,6 +225,7 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
 }
 
 .ham_active {
@@ -297,6 +300,11 @@ a {
 
     &__images {
         margin: 35vh auto 5% auto;
+        transition: .3s;
+
+        &:hover {
+            opacity: .5;
+        }
 
         @media (max-width: 766px) {
             width: 320px;
@@ -310,11 +318,17 @@ a {
     display: flex;
     width: 100%;
     min-height: 100vh;
-    background-color: rgb(115, 196, 78);
     overflow: hidden;
 
     @media (max-width: 766px) {
         min-height: 100vh;
+    }
+
+    &__prices {
+        display: block;
+        font-family: $main-font;
+        font-size: 24px;
+        margin: 35vh auto 5% auto;
     }
 }
 
