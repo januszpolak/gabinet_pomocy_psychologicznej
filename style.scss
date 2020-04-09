@@ -287,11 +287,22 @@ a {
     display: flex;
     width: 100%;
     min-height: 100vh;
-    background-color: rgb(129, 56, 56);
     overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
     @media (max-width: 766px) {
         min-height: 100vh;
+    }
+
+    &__images {
+        margin: 35vh auto 5% auto;
+
+        @media (max-width: 766px) {
+            width: 320px;
+            height: 240px;
+            margin: 15% auto;
+        }
     }
 }
 
@@ -322,6 +333,7 @@ a {
 
     &__map {
         margin-top: 15%;
+        border: none;
 
         @media (max-width: 766px) {
             display: none;
