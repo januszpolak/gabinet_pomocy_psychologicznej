@@ -22,6 +22,10 @@ $special-color:#528CB6;
     &:hover {
         color: $main-color;
     }
+
+    @media (max-width: 766px) {
+        display: none;
+    }
 }
 
 #call_me {

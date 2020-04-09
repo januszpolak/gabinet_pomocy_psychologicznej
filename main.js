@@ -23,6 +23,11 @@ $('#arrow_up').on('click', function () {
         scrollTop: $('.main').offset().top
     }, 1000)
 })
+$('#home-mobile').on('click', function () {
+    $('body, html').animate({
+        scrollTop: $('.main').offset().top
+    }, 1000)
+})
 
 
 const hamburger = document.getElementById('hamburger');
