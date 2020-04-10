@@ -1,6 +1,7 @@
 $main-font: 'Oswald';
 $main-color: #7FBBBF;
-$special-color:#528CB6;
+$special-color:#265d0d;
+$special-red:#9a1b05;
 
 * {
     margin: 0;
@@ -14,14 +15,15 @@ $special-color:#528CB6;
 #arrow_up {
     position: fixed;
     font-size: 48px;
-    color: $special-color;
+    color: $special-red;
     bottom: 8%;
     right: 4%;
     transition: .2s ease-in;
     animation: pulse 4s infinite;
+    z-index: 3;
 
     &:hover {
-        color: $main-color;
+        color: $special-color;
     }
 
 
@@ -69,22 +71,31 @@ $special-color:#528CB6;
 .header {
     position: fixed;
     display: flex;
-    margin-top: 2%;
     width: 100%;
-    padding-left: 3%;
-    background-color: #fff;
-    box-shadow: 0px 6px 14px -1px rgba(127, 187, 191, 1);
+    min-height: 15%;
     overflow: hidden;
-    z-index: 999;
+    z-index: 1;
+    background-color: #fff;
 
     @media (max-width: 766px) {
         display: none;
     }
 
-    &__logo {
-        width: 120px;
-    }
 
+}
+
+.logo {
+    padding-left: 3vw;
+}
+
+.mobile-logo {
+    display: none;
+
+    @media (max-width: 766px) {
+        display: block;
+        padding-left: 5%;
+        padding-top: 5%;
+    }
 }
 
 .nav {
@@ -97,14 +108,16 @@ $special-color:#528CB6;
         align-items: center;
         width: 100%;
         text-decoration: none;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     &__li {
+        padding-left: 20px;
         list-style-type: none;
         display: block;
-        width: 20%;
-        font-size: 24px;
+        width: 10%;
+        font-size: 20px;
+        border-left: 1px solid black;
 
 
     }
@@ -112,26 +125,22 @@ $special-color:#528CB6;
 
 a {
     text-decoration: none;
-    padding: 10px;
     font-family: $main-font;
     letter-spacing: 5px;
     color: $main-color;
     transition: .2s ease-in;
 
     &:hover {
-        border-bottom: 4px solid $special-color;
+        border-bottom: 1px solid $special-color;
         color: $special-color;
-        font-size: 26px;
+        font-size: 22px;
+
 
     }
 }
 
 .main {
-    background-image: url('cactus.jpg');
-    background-position: right;
-    background-position-y: bottom;
-    background-size: 60%;
-    background-repeat: no-repeat;
+
     width: 100%;
     min-height: 100vh;
 
@@ -144,19 +153,25 @@ a {
     }
 
     &__name {
+        position: absolute;
+        bottom: 0;
+        right: 0;
         color: $main-color;
         font-size: 15px;
         font-family: $main-font;
-        padding-top: 35vh;
-        padding-left: 3%;
-        width: 50%;
+        text-align: right;
+        padding: 10%;
+        width: 70%;
+        background-color: rgba(207, 205, 205, 0.1);
+
 
         @media (max-width: 766px) {
-            padding-top: 35vh;
+            bottom: 50%;
+            transform: translateY(+50%);
             font-size: 10px;
             width: 100%;
-            text-align: center;
-            padding-left: 0;
+            text-align: justify;
+            padding-left: 3%;
         }
     }
 
@@ -169,21 +184,6 @@ a {
 
 
         }
-    }
-}
-
-.logo-mobile {
-    display: none;
-
-    @media (max-width: 766px) {
-        display: block;
-        position: absolute;
-        top: 5%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 200px;
-        align-items: center;
-
     }
 }
 
@@ -255,6 +255,7 @@ a {
     overflow: hidden;
     justify-content: space-around;
 
+
     @media (max-width: 766px) {
         min-height: 100vh;
     }
@@ -294,6 +295,7 @@ a {
     flex-wrap: wrap;
     justify-content: space-around;
 
+
     @media (max-width: 766px) {
         min-height: 100vh;
     }
@@ -320,6 +322,7 @@ a {
     min-height: 100vh;
     overflow: hidden;
 
+
     @media (max-width: 766px) {
         min-height: 100vh;
     }
@@ -340,6 +343,7 @@ a {
     color: $main-color;
     font-family: $main-font;
     overflow: hidden;
+
 
     @media (max-width: 766px) {
         min-height: 100vh;
@@ -383,13 +387,13 @@ a {
     position: fixed;
     bottom: 0;
     left: 0;
-    display: block;
     width: 100%;
+    display: block;
     height: 5vh;
     background-color: #fff;
     text-align: center;
-    border-top: 1px solid $main-color;
-    box-shadow: 0px -2px 9px -1px $main-color;
+    border-top: 1px solid black;
+
     overflow: hidden;
 
     &__p {
