@@ -133,7 +133,7 @@ a {
     &:hover {
         border-bottom: 1px solid $special-color;
         color: $special-color;
-        font-size: 22px;
+        font-size: 20px;
 
 
     }
@@ -262,10 +262,6 @@ a {
     padding-top: 10%;
     overflow: hidden;
     justify-content: space-around;
-    align-items: center;
-
-
-
 
 
     @media (max-width: 766px) {
@@ -278,7 +274,7 @@ a {
         font-size: 18px;
         width: 90%;
         padding: 3%;
-        text-align: center;
+        text-align: justify;
 
 
         @media (max-width: 766px) {
@@ -292,7 +288,6 @@ a {
         float: right;
         padding-left: 3%;
         padding-bottom: 3%;
-
 
 
         @media (max-width: 766px) {
