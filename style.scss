@@ -1,6 +1,6 @@
 $main-font: 'Oswald';
 $main-color: #7FBBBF;
-$special-color:#265d0d;
+$special-color:#5D5A5A;
 $special-red:#9a1b05;
 
 * {
@@ -10,17 +10,7 @@ $special-red:#9a1b05;
 
 }
 
-body {
-    background-image: url('./bcg.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 70%;
-    background-position-y: bottom;
 
-    @media(max-width: 766px) {
-        background-size: 150%;
-    }
-}
 
 #arrow_up {
     position: fixed;
@@ -52,7 +42,7 @@ body {
         left: 4%;
         bottom: 8%;
         animation: pulse 4s infinite;
-
+        z-index: 888;
     }
 
     @keyframes pulse {
@@ -78,15 +68,71 @@ body {
     }
 }
 
+.top-info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 8vh;
+    width: 100%;
+    background-color: rgb(94, 90, 90);
+    z-index: 5;
+    animation: moveright 2s ease-in-out;
+
+    @media(max-width: 770px) {
+        display: none;
+    }
+
+    &__icons {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        align-items: center;
+        font-size: 15px;
+        font-family: $main-font;
+
+
+
+        @media (max-width:770px) {
+            display: none;
+
+        }
+
+    }
+
+}
+
+.top-info i {
+    display: inline-block;
+
+
+
+    &:nth-last-child(1) {
+        color: $main-color;
+        letter-spacing: 5px;
+    }
+}
+
+.top-info a:hover {
+    border: none;
+    font-size: 15px;
+
+
+}
+
 .header {
     position: fixed;
+    top: 8vh;
+    left: 0;
     display: flex;
+    justify-content: flex-end;
     width: 100%;
-    min-height: 15%;
+    min-height: 10%;
     overflow: hidden;
     z-index: 1;
-    background-color: #fff;
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+    background-color: #fff;
+    animation: moveright 2s ease-in-out;
 
     @media (max-width: 766px) {
         display: none;
@@ -95,39 +141,42 @@ body {
 
 }
 
-.logo {
-    padding-left: 3vw;
-}
+
 
 .mobile-logo {
     display: none;
 
     @media (max-width: 766px) {
         display: block;
-        padding-left: 5%;
-        padding-top: 5%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -150%);
     }
 }
 
 .nav {
     display: flex;
-    width: 100%;
+    width: 60%;
+
     overflow: hidden;
+    animation: moveright 2s ease-in-out;
+
 
     &__ul {
         display: flex;
         align-items: center;
         width: 100%;
         text-decoration: none;
-        justify-content: space-around;
+        justify-content: flex-end;
     }
 
     &__li {
         padding-left: 20px;
         list-style-type: none;
         display: block;
-        width: 10%;
-        font-size: 20px;
+        width: 30%;
+        font-size: 15px;
         border-left: 1px solid black;
 
 
@@ -144,63 +193,62 @@ a {
     &:hover {
         border-bottom: 1px solid $special-color;
         color: $special-color;
-        font-size: 20px;
+        font-size: 18px;
 
 
     }
 }
 
 .main {
-
+    background-image: url('./hands.jpg');
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position-y: 50%;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
 
 
     @media (max-width: 766px) {
         min-height: 100vh;
-
-    }
-
-    &__name {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        color: $main-color;
-        font-family: $main-font;
-        text-align: right;
-        padding: 8%;
-        width: 70%;
-        background-color: white;
-        z-index: -1;
+        background-size: cover;
+        background-position-x: 5%;
 
 
-        @media (max-width: 766px) {
-            bottom: 50%;
-            transform: translateY(+50%);
-            font-size: 10px;
-            width: 90%;
-            padding-left: 3%;
-        }
-    }
-
-    &__h1 {
-        font-size: 24px;
-        letter-spacing: 3px;
-
-        @media (max-width:766px) {
-            font-size: 15px;
-
-        }
     }
 
     &__h2 {
-        font-size: 15px;
-        margin-top: 5%;
+        position: absolute;
+        top: 45%;
+        right: 10%;
+        color: white;
+        font-size: 30px;
+        font-family: $main-font;
+        text-shadow: 0 0 5px $special-color;
+        animation: moveright 2s ease-in-out;
 
-        @media (max-width: 766px) {
-            font-size: 10px;
+    }
 
+    &__h1 {
+        position: absolute;
+        top: 45%;
+        right: 10%;
+        color: white;
+        font-size: 150px;
+        font-family: $main-font;
+        text-shadow: 0 0 15px $special-color;
+        animation: moveright 2s ease-in-out;
 
+    }
+
+    @keyframes moveright {
+        0% {
+            right: -10%;
+            opacity: 0;
+        }
+
+        100% {
+            right: 10%;
+            opacity: 1;
         }
     }
 }
@@ -259,7 +307,7 @@ a {
         position: fixed;
         top: 3%;
         right: 5%;
-        color: $main-color;
+        color: $special-color;
         font-size: 32px;
         transition: .3s;
         z-index: 5;
@@ -420,9 +468,9 @@ a {
     width: 100%;
     display: block;
     height: 5vh;
-    background-color: #fff;
+    background-color: $special-color;
     text-align: center;
-    border-top: 1px solid black;
+
 
     overflow: hidden;
 
@@ -431,5 +479,10 @@ a {
         width: 100%;
         transform: translateY(-50%);
         color: $main-color;
+        letter-spacing: 5px;
+
+        @media(max-width: 1190px) {
+            letter-spacing: 0;
+        }
     }
 }
