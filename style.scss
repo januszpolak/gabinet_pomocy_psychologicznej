@@ -105,12 +105,12 @@ $special-red:#9a1b05;
 
 .top-info a {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    margin: 0 auto;
     border: none;
     position: relative;
     width: 100%;
+    font-size: 12px;
 
     @media (max-width: 770px) {
         border: 1px solid $main-color;
@@ -132,7 +132,6 @@ $special-red:#9a1b05;
     }
 
     &:hover {
-
         border: none;
     }
 }
@@ -238,8 +237,8 @@ a {
 
     @media (max-width: 770px) {
         min-height: 100vh;
-        background-position-y: 80%;
-        background-size: 50%;
+        background-position-y: 25%;
+        background-size: 100%;
         overflow: hidden;
 
 
@@ -273,6 +272,8 @@ a {
         }
 
     }
+
+
 
     &__progres {
         font-size: 100px;
