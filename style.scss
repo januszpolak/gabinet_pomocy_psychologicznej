@@ -249,7 +249,7 @@ a {
     &__info {
         position: absolute;
         top: 30%;
-        right: 5%;
+        right: 0%;
         text-align: right;
         padding: 10% 10%;
         background-color: #fff;
@@ -286,6 +286,7 @@ a {
     &__progres {
         font-size: 100px;
         font-family: $main-font;
+
 
         &::after {
             content: 'Progres';
@@ -339,7 +340,7 @@ a {
         }
 
         50% {
-            background-image: url('./cactus.jpg');
+            background-image: url('./tele.jpg');
             background-repeat: no-repeat;
             background-size: 80%;
 
