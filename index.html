@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="./favicon.ico" />
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,200&display=swap"
+        rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -20,16 +22,18 @@
 
     <section class="top-info" id="top-info">
         <span class="top-info__icons">
-        <a href="https://goo.gl/maps/8aoa1DKZNM8T4bF27" target="_blank"><i class="fa fa-map-marker" aria-hidden="true">ul. Krakowska 15a 32-020 Wieliczka</i></a>
-        <a href="mailto:atebien@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true" class="contact__icon">atebien@gmail.com</i></a>
-        <i class="fa fa-phone" aria-hidden="true">696-613-855</i>
+       <i class="fa fa-map-marker" aria-hidden="true"><a href="https://goo.gl/maps/8aoa1DKZNM8T4bF27" target="_blank">ul. Krakowska 15a 32-020 Wieliczka</a></i>
+        <i class="fa fa-envelope-o" aria-hidden="true"><a href="mailto:atebien@gmail.com">atebien@gmail.com</a></i>
+        <i class="fa fa-phone" aria-hidden="true"><a href="tel:+48696613855">696-613-855</a></i>
+        
     </span>
     </section>
     <i class="fa fa-arrow-circle-up" aria-hidden="true" id='arrow_up'></i>
     <a href="tel:+48696613855"><img src="./css/tel.png"id='call_me'></a>
     <header class="header">
-        
+        <p class="header__www">www.gabinetprogres.pl</p>
         <nav class="nav">
+
             <ul class="nav__ul">
                 <li class="nav__li"><a href="#" id='me'>O mnie</a></li>
                 <li class="nav__li"><a href="#" id='room'>Gabinet</a></li>
@@ -50,10 +54,10 @@
     </div>
     <i class="fa fa-bars" aria-hidden="true" id='hamburger'></i>
     <main class="main">
-        
-        <h1 class="main__h2">gabinet terapeutyczny</h1>
-        <h1 class="main__h1">PROGRES</h1>
-
+        <span class="main__info">
+            <h2>gabinet</h2>
+            <h1 class="main__progres">Progres</h1>
+        </span>
     </main>
     <section class="me">
         <div class="me__info">
@@ -170,7 +174,7 @@
             <img src="./logo.png" alt="Artur Tebień psycholog" class="logo" id="logo">
         </div>
     </section>
-    
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

@@ -1,4 +1,5 @@
-$main-font: 'Oswald';
+$main-font: 'Montserrat',
+sans-serif;
 $main-color: #7FBBBF;
 $special-color:#5D5A5A;
 $special-red:#9a1b05;
@@ -78,9 +79,10 @@ $special-red:#9a1b05;
     bottom: 0;
     left: 0;
     display: flex;
-    height: 8vh;
+    height: 5vh;
     width: 100%;
-    background-color: rgb(94, 90, 90);
+    background-color: #5D5A5A;
+
     z-index: 5;
     animation: moveright 2s ease-in-out;
 
@@ -97,7 +99,6 @@ $special-red:#9a1b05;
         font-family: $main-font;
 
 
-
         @media (max-width:770px) {
             display: none;
 
@@ -107,30 +108,37 @@ $special-red:#9a1b05;
 
 }
 
-.top-info i {
+.top-info__icons i {
+    color: $main-color;
+
+}
+
+.top-info a {
     display: inline-block;
+    font-family: $main-font;
+    font-size: 12px;
+    padding-left: 10px;
 
+    letter-spacing: 3px;
 
+    &:hover {
+        border: none;
+        color: white;
+        font-size: 12px;
 
-    &:nth-last-child(1) {
-        color: $main-color;
-        letter-spacing: 5px;
     }
-}
-
-.top-info a:hover {
-    border: none;
-    font-size: 15px;
-
 
 }
+
+
 
 .header {
     position: fixed;
-    top: 5vh;
+    top: 0;
     left: 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 8%;
     overflow: hidden;
@@ -138,6 +146,14 @@ $special-red:#9a1b05;
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
     background-color: $special-color;
     animation: moveright 2s ease-in-out;
+
+    &__www {
+        font-family: $main-font;
+        font-size: 10px;
+        color: $main-color;
+        letter-spacing: 3px;
+        padding-left: 3%;
+    }
 
     @media (max-width: 766px) {
         display: none;
@@ -207,7 +223,7 @@ a {
 
 .main {
     background-color: $special-color;
-    background-image: url('./tele.jpg');
+    background-image: url('./bcg.jpg');
     background-repeat: no-repeat;
     background-size: 80%;
     background-position-y: 100%;
@@ -223,40 +239,40 @@ a {
 
     }
 
-    &__h2 {
+    &__info {
         position: absolute;
-        top: 45%;
+        top: 40%;
         right: 10%;
-        color: white;
-        font-size: 30px;
-        font-family: $main-font;
-        text-shadow: 0 0 5px $special-color;
-        animation: moveright 2s ease-in-out;
-
-        @media (max-width:1190px) {
-            font-size: 20px;
-            top: 50%;
-        }
+        text-align: right;
+        padding: 5% 10%;
+        background-color: #fff;
+        animation: moveright 4s ease-in-out;
+        overflow: hidden;
 
     }
 
-    &__h1 {
-        position: absolute;
-        top: 45%;
-        right: 10%;
-        color: $main-color;
-        font-size: 150px;
+    &__progres {
+        font-size: 100px;
         font-family: $main-font;
-        animation: moveright 2s ease-in-out;
 
-        @media (max-width:1190px) {
-            top: 55%;
-            font-size: 60px;
-
-
+        &::after {
+            content: 'Progres';
+            position: absolute;
+            bottom: 0;
+            right: -50%;
+            font-size: 250%;
+            color: rgba(0, 0, 0, 0.1);
         }
 
+        @media (max-width:1190px) {
+            font-size: 50px;
+        }
+
+
     }
+
+
+
 
     @keyframes moveright {
         0% {
