@@ -79,58 +79,63 @@ $special-red:#9a1b05;
     bottom: 0;
     left: 0;
     display: flex;
+    justify-content: space-around;
     height: 5vh;
     width: 100%;
     background-color: #5D5A5A;
-
     z-index: 5;
     animation: moveright 2s ease-in-out;
+    border: none;
 
     @media(max-width: 770px) {
-        display: none;
+        height: 10%;
+        border: 1px solid $main-color;
     }
-
-    &__icons {
-        display: flex;
-        justify-content: space-around;
-        width: 100%;
-        align-items: center;
-        font-size: 15px;
-        font-family: $main-font;
-
-
-        @media (max-width:770px) {
-            display: none;
-
-        }
-
-    }
-
 }
 
-.top-info__icons i {
-    color: $main-color;
+.top-info p {
+    display: block;
+    font-family: $main-font;
+    font-size: 12px;
 
+    @media (max-width: 770px) {
+        display: none;
+    }
 }
 
 .top-info a {
-    display: inline-block;
-    font-family: $main-font;
-    font-size: 12px;
-    padding-left: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    border: none;
+    position: relative;
+    width: 100%;
 
-    letter-spacing: 3px;
-
-    &:hover {
-        border: none;
-        color: white;
-        font-size: 12px;
-
+    @media (max-width: 770px) {
+        border: 1px solid $main-color;
     }
 
+
+    &:hover {
+        font-size: 12px;
+        border: none;
+    }
 }
 
+.top-info i {
+    @media(max-width: 770px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
+    &:hover {
+
+        border: none;
+    }
+}
 
 .header {
     position: fixed;
@@ -248,6 +253,13 @@ a {
         background-color: #fff;
         animation: moveright 4s ease-in-out;
         overflow: hidden;
+
+        @media (max-width: 766px) {
+            padding: 10% 20%;
+            right: 0;
+
+
+        }
 
     }
 
