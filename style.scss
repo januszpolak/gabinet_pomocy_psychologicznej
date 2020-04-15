@@ -157,6 +157,10 @@ $special-red:#9a1b05;
         color: $main-color;
         letter-spacing: 3px;
         padding-left: 3%;
+
+        @media (max-width:1190px) {
+            display: block;
+        }
     }
 
     @media (max-width: 766px) {
@@ -184,7 +188,6 @@ $special-red:#9a1b05;
 .nav {
     display: flex;
     width: 60%;
-
     overflow: hidden;
     animation: moveright 2s ease-in-out;
 
@@ -230,7 +233,6 @@ a {
     background-image: url('./bcg.jpg');
     background-repeat: no-repeat;
     background-size: 80%;
-    background-position-y: 100%;
     width: 100%;
     height: 100vh;
     animation: bcgChange 30s infinite;
@@ -246,13 +248,19 @@ a {
 
     &__info {
         position: absolute;
-        top: 40%;
-        right: 10%;
+        top: 30%;
+        right: 5%;
         text-align: right;
-        padding: 5% 10%;
+        padding: 10% 10%;
         background-color: #fff;
         animation: moveright 4s ease-in-out;
         overflow: hidden;
+
+        @media (max-width:1190px) {
+            top: 45%;
+            width: 100%;
+        }
+
 
         &::after {
             content: "zapraszam mgr Artur Tebień";
@@ -283,20 +291,23 @@ a {
             content: 'Progres';
             position: absolute;
             bottom: 0;
-            right: -50%;
+            right: -20%;
             font-size: 250%;
             color: rgba(0, 0, 0, 0.1);
+            animation: progres 40s infinite;
         }
 
         @media (max-width:1190px) {
             font-size: 50px;
         }
 
+        @keyframes progres {
+            50% {
+                transform: scale(4);
+            }
+        }
 
     }
-
-
-
 
     @keyframes moveright {
         0% {
@@ -305,7 +316,7 @@ a {
         }
 
         100% {
-            right: 10%;
+            right: 5%;
             opacity: 1;
         }
     }
@@ -316,6 +327,7 @@ a {
             background-image: url('./bcg.jpg');
             background-repeat: no-repeat;
             background-size: 80%;
+
 
         }
 
@@ -537,6 +549,7 @@ a {
         @media (max-width: 766px) {
             margin: auto 0;
             width: 70%;
+            margin-top: 5%;
         }
     }
 
@@ -554,20 +567,6 @@ a {
     &__icon {
         padding-right: 50px;
     }
-
-
-}
-
-.footer {
-    display: block;
-    width: 100%;
-    height: 5vh;
-    background-color: $special-color;
-    overflow: hidden;
-    color: $main-color;
-    font-size: 15px;
-    letter-spacing: 5px;
-    align-items: center;
 
 
 }
