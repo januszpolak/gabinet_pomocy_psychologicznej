@@ -14,7 +14,6 @@ $special-red:#9a1b05;
 
 
 
-
 #arrow_up {
     position: fixed;
     font-size: 48px;
@@ -232,7 +231,6 @@ a {
     background-color: $special-color;
     background-image: url('./bcg.jpg');
     background-repeat: no-repeat;
-    background-size: 80%;
     width: 100%;
     height: 100vh;
     animation: bcgChange 30s infinite;
@@ -255,6 +253,7 @@ a {
         background-color: #fff;
         animation: moveright 4s ease-in-out;
         overflow: hidden;
+        width: 60%;
 
         @media (max-width:1190px) {
             top: 45%;
@@ -263,7 +262,7 @@ a {
 
 
         &::after {
-            content: "zapraszam mgr Artur Tebień";
+            content: "zapraszam mgr Artur Tebień, terapeuta uzależnień, mediator sądowy, specjalista pomocy psychologicznej, interwent kryzysowy ";
             color: black;
             font-family: $main-font;
 
@@ -317,7 +316,7 @@ a {
         }
 
         100% {
-            right: 5%;
+            right: 0%;
             opacity: 1;
         }
     }
@@ -434,7 +433,6 @@ a {
     overflow: hidden;
     justify-content: space-around;
 
-
     @media (max-width: 766px) {
         min-height: 100vh;
     }
@@ -457,6 +455,8 @@ a {
     }
 
     &__picture {
+        width: 30%;
+        height: auto;
         float: right;
         padding-left: 3%;
         padding-bottom: 3%;
@@ -561,6 +561,7 @@ a {
 
         >a:hover {
             font-size: 32px;
+            color: #5D5A5A;
 
         }
     }
